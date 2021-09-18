@@ -1,0 +1,17 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "renics",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  }
+}

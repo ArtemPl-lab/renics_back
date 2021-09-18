@@ -1,0 +1,25 @@
+{
+  "name": "CartItem",
+  "base": "Model",
+  "idInjection": true,
+  "properties": {
+    "productId": {
+      "type": "string",
+      "required": true
+    },
+    "count": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

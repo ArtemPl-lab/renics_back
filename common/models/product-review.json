@@ -1,0 +1,56 @@
+{
+  "name": "ProductReview",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "evaluation": {
+      "type": "number",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "liked": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "disliked": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "attachments": {
+      "type": [
+        "string"
+      ],
+      "required": false,
+      "default": []
+    },
+    "validate": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "accountId",
+      "options": {
+        "nestRemoting": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

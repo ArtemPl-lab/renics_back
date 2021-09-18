@@ -1,0 +1,101 @@
+{
+  "name": "Product",
+  "plural": "products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "object",
+      "required": true
+    },
+    "defaultPrice": {
+      "type": "object",
+      "required": true
+    },
+    "salePrice": {
+      "type": "object"
+    },
+    "inStock": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "likedCounter": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "articul": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "object",
+      "required": false
+    },
+    "preOrder": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "default": []
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasMany",
+      "model": "ProductReview",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findOne"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__create__reviews"
+    }
+  ],
+  "methods": {}
+}

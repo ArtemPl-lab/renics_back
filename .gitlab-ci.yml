@@ -1,0 +1,12 @@
+stages:
+    - deploy
+deploy:
+    stage: deploy
+    script:
+        - echo "Building deploy package"
+        - npm install --prefer-offline --no-audit
+        - pm2 delete backend || true
+        - pm2 start npm --name "backend" -- start
+        - echo "Server started"
+    only:
+        - master

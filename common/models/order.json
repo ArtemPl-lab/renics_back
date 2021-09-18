@@ -1,0 +1,30 @@
+{
+  "name": "Order",
+  "plural": "orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "forming"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "embedsMany",
+      "model": "CartItem",
+      "property": "items",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
