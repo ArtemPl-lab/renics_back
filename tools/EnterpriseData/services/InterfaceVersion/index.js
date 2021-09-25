@@ -16,7 +16,7 @@ const service = {
 };
 
 module.exports = function(app){
-    const wsdl_path = '/pref/ws/InterfaceVersion';
+    const wsdl_path = '/ws/InterfaceVersion';
     const server = soap.listen(app, {
         path: wsdl_path,
         services: service,

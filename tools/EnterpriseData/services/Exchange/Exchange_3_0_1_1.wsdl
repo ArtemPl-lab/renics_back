@@ -1436,11 +1436,11 @@
 				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
 						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
 			</documentation>
-			<soapbind:address location="{appHost}/pref/ws/Exchange_3_0_1_1"/>
+			<soapbind:address location="{appHost}/ws/Exchange_3_0_1_1"/>
 		</port>
 		<port name="Exchange_3_0_1_1Soap12"
 				binding="tns:Exchange_3_0_1_1Soap12Binding">
-			<soap12bind:address location="{appHost}/pref/ws/Exchange_3_0_1_1"/>
+			<soap12bind:address location="{appHost}/ws/Exchange_3_0_1_1"/>
 		</port>
 	</service>
 </definitions>

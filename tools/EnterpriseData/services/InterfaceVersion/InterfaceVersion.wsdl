@@ -614,11 +614,11 @@
 				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
 						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
 			</documentation>
-			<soapbind:address location="{appHost}/pref/ws/InterfaceVersion"/>
+			<soapbind:address location="{appHost}/ws/InterfaceVersion"/>
 		</port>
 		<port name="InterfaceVersionSoap12"
 				binding="tns:InterfaceVersionSoap12Binding">
-			<soap12bind:address location="{appHost}/pref/ws/InterfaceVersion"/>
+			<soap12bind:address location="{appHost}/ws/InterfaceVersion"/>
 		</port>
 	</service>
 </definitions>

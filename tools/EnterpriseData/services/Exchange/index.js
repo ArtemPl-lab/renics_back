@@ -22,7 +22,7 @@ const service = {
 };
 
 module.exports = function(app){
-    const wsdl_path = '/pref/ws/Exchange_3_0_1_1';
+    const wsdl_path = '/ws/Exchange_3_0_1_1';
     const server = soap.listen(app, {
         path: wsdl_path,
         services: service,
