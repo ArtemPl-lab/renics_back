@@ -2,7 +2,7 @@
   "restApiRoot": "/",
   "host": "0.0.0.0",
   "port": 4000,
-  "url": "http://localhost:4000",
+  "url": "https://api.renics.org",
   "remoting": {
     "context": false,
     "rest": {
